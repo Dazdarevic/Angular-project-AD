@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo.jpg" alt="Ikonica" width="120" height="100" class="d-inline-block align-top"
+    style="margin-left: 50px;">
+  </a>  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngSwitch]="menuType" class="collapse navbar-collapse" id="navbarNav">
+    <ul *ngSwitchCase="'default'"  class="navbar-nav" style="margin-left: 280px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="signup">Sign Up</a>
+      </li>
+    </ul>
+
+    <ul *ngSwitchCase="'admin'" class="navbar-nav" style="margin-left: 280px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="admin-dashboard">Admins</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="receptionists">Receptionists</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="managers">Managers</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="newUser">Add New User</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Admin</a>
+      </li>
+    </ul>
+
+    <ul *ngSwitchCase="'manager'" class="navbar-nav" style="margin-left: 80px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="trainers">Trainers</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="members">Members</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Manager</a>
+      </li>
+    </ul>
+    <ul *ngSwitchCase="'seller'" class="navbar-nav" style="margin-left: 80px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="products">Products</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Seller</a>
+      </li>
+    </ul>
+    <ul *ngSwitchCase="'sponsor'" class="navbar-nav" style="margin-left: 80px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="ads">Advertisments</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Sponsor</a>
+      </li>
+    </ul>
+    <ul *ngSwitchCase="'receptionist'" class="navbar-nav" style="margin-left: 80px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="requests">Requests for Registration</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Receptionist</a>
+      </li>
+    </ul>
+    <ul *ngSwitchCase="'member'" class="navbar-nav" style="margin-left: 80px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="show-trainers">Trainers</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="all-ads">Ads</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="all-products">Products</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Member</a>
+      </li>
+    </ul>
+
+    <ul *ngSwitchCase="'trainer'" class="navbar-nav" style="margin-left: 80px;">
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="my-member">My Members</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active current">
+        <a class="nav-link" routerLink="login" (click)="logout()">Log out</a>
+      </li>
+      <li class="nav-item" style="margin-left: 600px;">
+        <a class="nav-link text-primary">Trainer</a>
+      </li>
+    </ul>
+  </div>
+</nav>

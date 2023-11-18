@@ -1,0 +1,18 @@
+.btn-outline-dark:hover {
+  cursor: pointer;
+}
+.star-rating {
+  display: inline-block;
+  font-size: 30px;
+}
+
+.star {
+  color: white; /* Default color */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star.filled,
+.star:hover {
+  color: #f8d71e; /* Color on hover and when rated */
+}

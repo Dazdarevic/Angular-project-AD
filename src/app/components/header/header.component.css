@@ -1,0 +1,21 @@
+nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.nav-link {
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  /* background-color: red; */
+  padding: 20px 0px;
+  margin: 0 10px;
+}
+
+.nav-link:active {
+  color: #f00;
+  text-decoration: underline;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
